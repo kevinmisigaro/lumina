@@ -1,11 +1,19 @@
-const ProductCard = ({ image, uniqueI, title, description }: { image: string, uniqueI: string, title: string, description: string }) => {
+const ProductCard = ({
+  image,
+  uniqueI,
+  title,
+  description,
+}: {
+  image: string;
+  uniqueI: string;
+  title: string;
+  description: string;
+}) => {
   return (
     <>
       <div
         onClick={() => {
-          const dialog = document.getElementById(
-            uniqueI
-          ) as HTMLDialogElement;
+          const dialog = document.getElementById(uniqueI) as HTMLDialogElement;
           if (dialog) {
             dialog.showModal();
           }
@@ -19,26 +27,23 @@ const ProductCard = ({ image, uniqueI, title, description }: { image: string, un
           className="h-[28vh] bg-cover bg-center"
         />
         <div className="p-6">
-          <div className="group-hover:underline">
-            {title}
-          </div>
+          <div className="group-hover:underline">{title}</div>
         </div>
       </div>
 
       <dialog id={uniqueI} className="modal">
         <div className="modal-box w-11/12 max-w-5xl bg-white">
-          <h3 className="font-bold text-lg mb-4">
-            {title}
-          </h3>
+          <h3 className="font-bold text-lg mb-4">{title}</h3>
           <div
-          style={{
-            backgroundImage: `url("${image}")`,
-          }}
-          className="h-[35vh] bg-cover bg-center"
-        />
-          <p className="py-4 text-justify">
-            {description}
-          </p>
+            style={{
+              backgroundImage: `url("${image}")`,
+            }}
+            className="h-[35vh] bg-cover bg-center"
+          />
+          <div
+            className="py-4 text-justify"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}

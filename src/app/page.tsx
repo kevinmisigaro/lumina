@@ -114,11 +114,11 @@ export default function Home() {
                 experienced lighting consultants provide personalized advice,
                 guiding you through the selection of fixtures, bulbs, and
                 placements that best suit your space and lifestyle. Whether
-                you're renovating a single room or designing an entire home, we
-                offer expert insights and recommendations to help you achieve
-                the perfect balance of light and shadow. With our consultation,
-                you can make informed decisions that enhance the beauty and
-                functionality of your interiors.
+                you&apos;re renovating a single room or designing an entire
+                home, we offer expert insights and recommendations to help you
+                achieve the perfect balance of light and shadow. With our
+                consultation, you can make informed decisions that enhance the
+                beauty and functionality of your interiors.
               </p>
             </div>
           </div>
@@ -129,15 +129,15 @@ export default function Home() {
             </div>
             <div className="collapse-content">
               <p>
-                Lighting is more than just a functional element; it's a powerful
-                tool that can transform the ambiance and style of any room. Our
-                interior design services focus on creating custom lighting
-                solutions that complement and elevate your overall design
-                vision. We work closely with you to understand your aesthetic
-                preferences, functional needs, and spatial dynamics, crafting a
-                lighting plan that brings warmth, elegance, and personality to
-                your interiors. From modern minimalism to classic luxury, our
-                designs are tailored to make your spaces shine.
+                Lighting is more than just a functional element; it&apos;s a
+                powerful tool that can transform the ambiance and style of any
+                room. Our interior design services focus on creating custom
+                lighting solutions that complement and elevate your overall
+                design vision. We work closely with you to understand your
+                aesthetic preferences, functional needs, and spatial dynamics,
+                crafting a lighting plan that brings warmth, elegance, and
+                personality to your interiors. From modern minimalism to classic
+                luxury, our designs are tailored to make your spaces shine.
               </p>
             </div>
           </div>
@@ -152,11 +152,11 @@ export default function Home() {
                 the cornerstone of any successful lighting design. Our expert
                 team ensures that every light fixture is installed with
                 precision and care, seamlessly integrating with your space.
-                Whether it's a complex chandelier in a grand entryway or subtle
-                recessed lighting in a cozy living room, we guarantee a flawless
-                installation that enhances the beauty and functionality of your
-                environment. We handle every detail, so you can enjoy perfectly
-                illuminated spaces without worry.
+                Whether it&apos;s a complex chandelier in a grand entryway or
+                subtle recessed lighting in a cozy living room, we guarantee a
+                flawless installation that enhances the beauty and functionality
+                of your environment. We handle every detail, so you can enjoy
+                perfectly illuminated spaces without worry.
               </p>
             </div>
           </div>
