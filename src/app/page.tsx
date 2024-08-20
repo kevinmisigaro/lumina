@@ -1,13 +1,9 @@
 "use client";
 
-import NavBar from "@/components/NavBar";
 import ProductCard from "@/components/ProductCard";
 import TitleItem from "@/components/TitleItem";
 import ValueCard from "@/components/ValueCard";
-import { Cormorant } from "next/font/google";
 import { useRef } from "react";
-
-const cormorant = Cormorant({ subsets: ["latin"], weight: "600" });
 
 export default function Home() {
   const section1Ref = useRef(null);
@@ -21,9 +17,9 @@ export default function Home() {
 
   return (
     <div>
-      <div className="navbar bg-base-100 mb-5">
+      <div className="navbar bg-base-100 -mt-5">
         <div className="flex-1">
-          <TitleItem title="Lumina Ventures" />
+          <div className="text-xl font-bold">Lumina Ventures</div>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
@@ -36,41 +32,47 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-y-10 md:gap-y-0 items-center px-5 md:px-20">
-        <div className="basis-1/2 text-2xl">
-          We provide cutting-edge lighting and electrical products for
-          residential and commercial spaces.
-        </div>
-        <div className="basis-1/2 flex items-center justify-end">
-          <div
-            onClick={() => scrollToSection(section1Ref)}
-            className="bg-[#401716] hover:text-[#401716] hover:bg-transparent hover:border-[#401716] hover:border-2 hover:text-[#401716] cursor-pointer text-white px-10 py-3 text-center max-w-fit"
-          >
-            Find out more
+
+      <div className="hero h-[70vh] bg-[url('/images/pexels-pixabay-162539.jpg')]">
+        <div className="hero-overlay bg-opacity-60 bg-black"></div>
+        <div className="hero-content text-neutral-content">
+          <div className="max-w-4xl">
+            <div className="mb-5 text-white text-4xl font-bold">
+              We provide Real Estate consulting, Electrical products and
+              Security Systems
+            </div>
+            <div
+              onClick={() => scrollToSection(section1Ref)}
+              className="mt-10 bg-green-800 hover:text-[#401716] text-sm hover:bg-transparent hover:border-[#401716] hover:border-2 hover:text-[#401716] cursor-pointer text-white px-4 py-2 text-center max-w-fit"
+            >
+              Read more
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center mt-10 h-[60vh] bg-cover bg-center bg-[url('/images/pexels-fotios-photos-1090638.jpg')]" />
-
-      <div className="px-5 md:px-20" ref={section1Ref}>
-        <div className="w-full my-20 flex flex-col gap-y-4">
+      <div ref={section1Ref}>
+        <div className="px-5 md:px-20 w-full my-20 grid grid-cols-1 md:grid-cols-2 gap-y-4 items-center">
           <div
-            className={`text-center text-5xl text-[#401716] mb-5 ${cormorant.className}`}
+            style={{
+              lineHeight: "5rem",
+            }}
+            className="text-center text-4xl md:text-7xl text-black mb-5"
           >
-            High quality & Reliable
+            High quality
+            <br /> and Reliable
           </div>
 
-          <div className="w-full text-2xl text-center">
+          <div className="w-full text-xl text-justify leading-loose">
             Lumina Ventures operates in the lighting and electrical products
             industry, dedicated to enhancing living and working environments
             with high-quality, reliable, and efficient solutions.
           </div>
-
-          <div className="mt-10 w-full h-[0.2px] bg-[#401716]" />
         </div>
 
-        <div className="mt-20" ref={productsRef}>
+        <div className="px-5 md:px-20 mt-10 w-full h-[0.2px] bg-[#401716]" />
+
+        <div className="px-5 md:px-20 mt-20" ref={productsRef}>
           <TitleItem title="Our Products" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-5 mt-8">
             <ProductCard
@@ -100,7 +102,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20" ref={servicesRef}>
+        <div className="px-5 md:px-20 mt-20" ref={servicesRef}>
           <TitleItem title="Our Services" />
           <div className="collapse collapse-plus bg-base-200 border-2 border-[#401716] rounded-none mt-10">
             <input type="radio" name="my-accordion-3" defaultChecked />
@@ -119,6 +121,29 @@ export default function Home() {
                 achieve the perfect balance of light and shadow. With our
                 consultation, you can make informed decisions that enhance the
                 beauty and functionality of your interiors.
+              </p>
+            </div>
+          </div>
+          <div className="collapse collapse-plus bg-base-200  border-2 border-[#401716] rounded-none">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title text-xl font-medium">
+              Real Estate
+            </div>
+            <div className="collapse-content">
+              <p>
+                Our real estate service provides comprehensive support to
+                venture capital firms looking to optimize their property
+                investments. We offer strategic guidance on identifying
+                high-potential real estate opportunities, ensuring each
+                investment aligns with the firm&apos;s overall growth
+                objectives. Our expert team conducts thorough market analysis,
+                due diligence, and financial modeling to maximize returns and
+                minimize risk. Whether acquiring commercial properties,
+                developing new projects, or managing existing assets, our
+                service is tailored to meet the unique needs of venture capital
+                firms, providing them with the insights and tools necessary to
+                make informed, profitable decisions in the dynamic real estate
+                market.
               </p>
             </div>
           </div>
@@ -162,14 +187,42 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-20 px-5 md:px-20 bg-green-900 py-16">
+          <div className="text-center mb-20 font-bold text-4xl text-white">
+            Our statistics
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="stats shadow text-white">
+              <div className="stat flex flex-col items-center">
+                <div className="stat-value">100+</div>
+                <div className="stat-title">Clients</div>
+              </div>
+            </div>
+
+            <div className="stats shadow text-white">
+              <div className="stat flex flex-col items-center">
+                <div className="stat-value">50,000 hours</div>
+                <div className="stat-title">Average Lifespan for lights</div>
+              </div>
+            </div>
+
+            <div className="stats shadow text-white">
+              <div className="stat flex flex-col items-center">
+                <div className="stat-value">75%</div>
+                <div className="stat-title">Energy efficiency</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="px-5 md:px-20 mt-20">
           <TitleItem title="Our Values" />
           <div className="text-3xl w-1/2 my-10">
             Our values enable us to work efficiently and clearly with our
             customers.
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
-            <div className="h-full w-full bg-cover bg-center bg-[url('/images/pexels-joy-singh-1008768-2764942.jpg')]" />
             <ValueCard
               title="⁠Innovation"
               customClass="col-start-2"
