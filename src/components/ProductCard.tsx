@@ -18,7 +18,7 @@ const ProductCard = ({
             dialog.showModal();
           }
         }}
-        className="border-2 rounded-md max-w-md border-[#401716] cursor-pointer group"
+        className="border-2 rounded-md border-[#401716] cursor-pointer group"
       >
         <div
           style={{

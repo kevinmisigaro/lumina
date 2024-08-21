@@ -76,7 +76,7 @@ export default function Home() {
 
         <div className="px-5 md:px-20 mt-20" ref={productsRef}>
           <TitleItem title="Our Products" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-5 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5 mt-8">
             <ProductCard
               title="Lighting"
               uniqueI="1"
