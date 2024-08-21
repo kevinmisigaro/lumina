@@ -2,6 +2,7 @@
 
 import ProductCard from "@/components/ProductCard";
 import TitleItem from "@/components/TitleItem";
+import TopBar from "@/components/TopBar";
 import ValueCard from "@/components/ValueCard";
 import { useRef } from "react";
 
@@ -17,7 +18,8 @@ export default function Home() {
 
   return (
     <div>
-      <div className="navbar bg-base-100 -mt-5">
+      <TopBar />
+      <div className="navbar bg-base-100">
         <div className="flex-1">
           <div className="text-xl font-bold">Lumina Ventures</div>
         </div>
@@ -43,7 +45,7 @@ export default function Home() {
             </div>
             <div
               onClick={() => scrollToSection(section1Ref)}
-              className="mt-10 bg-green-800 hover:text-[#401716] text-sm hover:bg-transparent hover:border-[#401716] hover:border-2 hover:text-[#401716] cursor-pointer text-white px-4 py-2 text-center max-w-fit"
+              className="mt-10 bg-green-800 hover:text-[#401716] text-sm hover:bg-white hover:border-[#401716] hover:border-2 hover:text-black cursor-pointer text-white px-4 py-2 text-center max-w-fit"
             >
               Read more
             </div>
@@ -203,7 +205,9 @@ export default function Home() {
             <div className="stats shadow text-white">
               <div className="stat flex flex-col items-center">
                 <div className="stat-value">50,000 hours</div>
-                <div className="stat-title">Average Lifespan for lights</div>
+                <div className="stat-title">
+                  Average Lifespan for our lights
+                </div>
               </div>
             </div>
 

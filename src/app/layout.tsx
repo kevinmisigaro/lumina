@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="py-10 h-full ">{children}</div>
+        <div className="h-full">{children}</div>
         <Footer />
       </body>
     </html>
