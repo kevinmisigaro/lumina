@@ -222,14 +222,14 @@ export default function Home() {
 
         <div className="px-5 md:px-20 mt-20">
           <TitleItem title="Our Values" />
-          <div className="text-3xl w-1/2 my-10">
+          <div className="text-3xl w-full md:w-1/2 my-10">
             Our values enable us to work efficiently and clearly with our
             customers.
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
             <ValueCard
               title="⁠Innovation"
-              customClass="col-start-2"
+              customClass="md:col-start-2"
               description="We stay ahead of market trends with continuous research and development, ensuring our products incorporate the latest technologies."
             />
             <ValueCard
