@@ -6,7 +6,7 @@ const cormorant = Cormorant({ subsets: ["latin"], weight: "500" });
 function Footer() {
   return (
   <>
-  <footer className="footer bg-black text-gray-400 p-10 mt-10">
+  <footer className="footer bg-green-900 text-gray-300 p-10 mt-10">
   <nav>
     <h6 className="footer-title">Services</h6>
     <a className="link link-hover">Consultation</a>
@@ -29,7 +29,7 @@ function Footer() {
     <a className="link link-hover">⁠Sustainability</a>
   </nav>
 </footer>
-<footer className="footer bg-black text-gray-400 border-base-100 border-t px-10 py-4">
+<footer className="footer bg-green-900 text-gray-300 border-base-100 border-t px-10 py-4">
   <aside className="grid-flow-col items-center">
     <p>
       Lumina Ventures
